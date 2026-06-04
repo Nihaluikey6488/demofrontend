@@ -12,11 +12,11 @@ const App = () => {
   } = useForm();
 
   
+  console.log("Base URL:", axiosInstance.defaults.baseURL);
   const onSubmit = async(data) => {
 try {
   let res=await axiosInstance.post("/api/auth/register",data)
   console.log('res',res.data)
-  console.log("Base URL:", axiosInstance.defaults.baseURL);
   
 } catch (error) {
   console.log('error in frontend App')

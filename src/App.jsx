@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axiosInstance from "./assets/axios";
 import axios from "axios";
+import { useEffect } from "react";
 
 const App = () => {
   const {
@@ -10,10 +11,12 @@ const App = () => {
     formState: { errors },
   } = useForm();
 
+  
   const onSubmit = async(data) => {
 try {
-     let res=await axios.post("https://demobackend-revl.onrender.com/api/auth/register",data)
+     let res=await axiosInstance.post("/api/auth/register",data)
    console.log('res',res.data)
+  
 } catch (error) {
   console.log('error in frontend App')
 }

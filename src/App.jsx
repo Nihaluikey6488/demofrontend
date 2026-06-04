@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import axiosInstance from "./assets/axios";
+import axiosInstance from "./api/axios";
 import axios from "axios";
 import { useEffect } from "react";
 
